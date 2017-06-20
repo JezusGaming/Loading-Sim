@@ -1,12 +1,15 @@
 #include "ObjectPool.h"
 #include "Entity.h"
+#include <crtdbg.h>
 
 ObjectPool::ObjectPool(int nMaxSize)
 {
 	m_nMaxSize = nMaxSize;
+	_ASSERT(m_pPool);
 	m_pPool = new Entity*[nMaxSize];
 	for (int i = 0; i < nMaxSize; ++i)
 	{
+		_ASSERT(m_pPool[i]);
 		m_pPool[i] = new Entity();
 	}
 }

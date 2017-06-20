@@ -3,6 +3,7 @@
 #include "Texture.h"
 #include "Font.h"
 #include "ResourceManager.h"
+#include "ObjectPool.h"
 
 using namespace aie;
 
@@ -17,9 +18,13 @@ GameState::~GameState()
 
 void GameState::OnEnter(StateMachine * pMachine)
 {
+	/*player = new ObjectPool(10);*/
+
 	ResourceManager<Texture>* pTextureManager = ResourceManager<Texture>::GetInstance();
 
 	m_shipTexture = pTextureManager->LoadResource("./textures/ship.png");
+
+	m_fidgetTexture = pTextureManager->LoadResource("./textures/FStest.png");
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -56,15 +61,21 @@ void GameState::OnUpdate(float deltaTime, StateMachine * pMachine)
 void GameState::OnDraw(Renderer2D * m_2dRenderer)
 {
 
+	m_2dRenderer->drawSprite(m_fidgetTexture, 600, 600, 0, 0, sin(m_timer) * 15, 1);
+	m_2dRenderer->setRenderColour(1, 0, 100, 1);
+	m_2dRenderer->drawSprite(m_fidgetTexture, 700, 500, 0, 0, sin(m_timer) * 10, 1);
+	m_2dRenderer->setRenderColour(100, 0, 1, 1);
+	m_2dRenderer->drawSprite(m_fidgetTexture, 500, 500, 0, 0, sin(m_timer) * 5, 1);
+
 	// demonstrate spinning sprite
 	m_2dRenderer->setUVRect(0, 0, 1, 1);
-	m_2dRenderer->drawSprite(m_shipTexture, 600, 400, 0, 0, m_timer, 1);
+	m_2dRenderer->drawSprite(m_shipTexture, 600, 400, 0, 0, sin(m_timer), 1);
 
 	// draw a thin line
 	m_2dRenderer->drawLine(300, 300, 500, 400, 2, 1);
 
 	// draw a moving purple circle
-	m_2dRenderer->setRenderColour(1, 0, 1, 1);
+	m_2dRenderer->setRenderColour(tan(m_timer) + sin(m_timer) + 1, tan(m_timer) + 0, sin(m_timer) + 1, cos(m_timer) + 1);
 	m_2dRenderer->drawCircle(sin(m_timer) * 100 + 600, 150, 50);
 
 	// draw a rotating red box

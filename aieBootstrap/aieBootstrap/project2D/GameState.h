@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseState.h"
+#include "Player.h"
 class GameState : public BaseState
 {
 public:
@@ -14,6 +15,9 @@ public:
 private:
 
 	aie::Texture*		m_shipTexture;
+	aie::Texture*		m_fidgetTexture;
+
+	Player* player;
 
 	float m_cameraX, m_cameraY;
 	float m_timer;

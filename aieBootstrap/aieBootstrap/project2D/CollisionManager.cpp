@@ -1,5 +1,6 @@
 #include "CollisionManager.h"
 #include <iostream>
+#include <crtdbg.h>
 using namespace std;
 
 CollisionManager* CollisionManager::m_instance = nullptr;
@@ -27,6 +28,7 @@ CollisionManager* CollisionManager::GetInstance()
 void CollisionManager::Create()
 {
 	if (!m_instance)
+		_ASSERT(m_instance);
 		m_instance = new CollisionManager();
 }
 //----------------------------------------------------------------------------

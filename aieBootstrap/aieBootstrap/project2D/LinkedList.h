@@ -1,5 +1,6 @@
 #pragma once
 #include "ListNode.h"
+#include <crtdbg.h>
 template <typename T>
 class LinkedList
 {
@@ -7,7 +8,9 @@ public:
 
 	LinkedList()
 	{
+		_ASSERT(start);
 		start = new ListNode<T>();
+		_ASSERT(end);
 		end = new ListNode<T>();
 		start->next = end;
 		start->prev = nullptr;
@@ -24,6 +27,7 @@ public:
 
 	void insert(T value, ListNode<T>* prev, ListNode<T>* next)
 	{
+		_ASSERT(n1);
 		ListNode<T>* n1 = new ListNode<T>();
 		n1->data = value;
 		n1->next = next;

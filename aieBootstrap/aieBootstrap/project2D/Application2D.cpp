@@ -7,7 +7,7 @@
 #include "MenuState.h"
 #include "GameState.h"
 #include "LoadState.h"
-
+#include <crtdbg.h>
 
 
 using namespace aie;
@@ -22,6 +22,7 @@ Application2D::~Application2D()
 
 bool Application2D::startup() 
 {
+	_ASSERT(m_2dRenderer);
 	m_2dRenderer = new Renderer2D();
 
 	ResourceManager<Texture>::Create();
@@ -32,10 +33,12 @@ bool Application2D::startup()
 
 	/*m_shipTexture = new Texture("./textures/ship.png");*/
 
+	_ASSERT(m_font);
 	m_font = new Font("./font/consolas.ttf", 32);
 
 	/*m_audio = new Audio("./audio/powerup.wav");*/
 
+	_ASSERT(m_pStateMachine);
 	m_pStateMachine = new StateMachine();
 
 	m_pStateMachine->AddState(0, new SplashState());

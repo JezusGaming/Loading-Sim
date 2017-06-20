@@ -1,9 +1,11 @@
 #include "SplashState.h"
 #include "Font.h"
 #include "StateMachine.h"
+#include <crtdbg.h>
 
 SplashState::SplashState()
 {
+	_ASSERT(m_font);
 	m_font = new Font("./font/consolas.ttf", 32);
 }
 

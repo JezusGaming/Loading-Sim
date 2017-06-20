@@ -3,12 +3,14 @@
 #include "Vector2.h"
 #include "Matrix3.h"
 #include "CollisionManager.h"
+#include <crtdbg.h>
 using namespace aie;
 //----------------------------------------------------------------------------
 // default constructor
 //----------------------------------------------------------------------------
 Player::Player()
 {
+	_ASSERT(m_ShipTexture);
 	m_ShipTexture = new Texture("./textures/ship.png");
 	speed = 500.0f;
 	mass = 1.5f;

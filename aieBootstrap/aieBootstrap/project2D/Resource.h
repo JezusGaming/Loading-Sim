@@ -8,6 +8,7 @@ public:
 	Resource(char* szFileName)
 	{
 		int length = strlen(szFileName) + 1;
+		_ASSERT(m_szFileName);
 		m_szFileName = new char[length];
 		strcpy_s(m_szFileName, length, szFileName);
 

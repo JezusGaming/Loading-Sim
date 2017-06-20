@@ -4,9 +4,11 @@
 #include "Font.h"
 #include "ResourceManager.h"
 #include "StateMachine.h"
+#include <crtdbg.h>
 
 MenuState::MenuState()
 {
+	_ASSERT(m_font);
 	m_font = new Font("./font/consolas.ttf", 32);
 }
 
