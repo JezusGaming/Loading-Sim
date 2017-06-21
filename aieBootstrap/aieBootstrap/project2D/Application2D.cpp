@@ -33,8 +33,8 @@ bool Application2D::startup()
 
 	/*m_shipTexture = new Texture("./textures/ship.png");*/
 
-	_ASSERT(m_font);
-	m_font = new Font("./font/consolas.ttf", 32);
+	/*_ASSERT(m_font);
+	m_font = new Font("./font/consolas.ttf", 32);*/
 
 	/*m_audio = new Audio("./audio/powerup.wav");*/
 
@@ -56,7 +56,7 @@ bool Application2D::startup()
 void Application2D::shutdown() 
 {
 	/*delete m_audio;*/
-	delete m_font;
+	/*delete m_font;*/
 	delete m_shipTexture;
 	delete m_2dRenderer;
 }
