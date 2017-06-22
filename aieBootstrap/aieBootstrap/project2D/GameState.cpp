@@ -5,6 +5,7 @@
 #include "ResourceManager.h"
 #include "ObjectPool.h"
 
+
 using namespace aie;
 
 GameState::GameState()
@@ -20,11 +21,11 @@ void GameState::OnEnter(StateMachine * pMachine)
 {
 	/*player = new ObjectPool(10);*/
 
-	/*ObjectPool pool(50);
+	ObjectPool pool(10);
 
 	Entity* p = pool.Allocate();
 
-	pool.Deallocate(p);*/
+	pool.Deallocate(p);
 
 	ResourceManager<Texture>* pTextureManager = ResourceManager<Texture>::GetInstance();
 
@@ -66,7 +67,6 @@ void GameState::OnUpdate(float deltaTime, StateMachine * pMachine)
 
 void GameState::OnDraw(Renderer2D * m_2dRenderer)
 {
-
 	m_2dRenderer->drawSprite(m_fidgetTexture, 600, 600, 0, 0, sin(m_timer) * 15, 1);
 	m_2dRenderer->setRenderColour(0, 0, 1, 1);
 	m_2dRenderer->drawSprite(m_fidgetTexture, 700, 500, 0, 0, sin(m_timer) * 10, 1);
@@ -98,4 +98,5 @@ void GameState::OnDraw(Renderer2D * m_2dRenderer)
 
 void GameState::OnExit(StateMachine * pMachine)
 {
+	
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "BaseState.h"
 #include "Player.h"
+#include "FidgetSpinner.h"
 class GameState : public BaseState
 {
 public:

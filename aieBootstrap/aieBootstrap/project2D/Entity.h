@@ -4,6 +4,7 @@
 #include "Matrix3.h"
 #include "Texture.h"
 #include "Renderer2d.h"
+#include "Texture.h"
 class Entity
 {
 
