@@ -19,7 +19,7 @@ public:
 	//
 	// Param:
 	//      deltaTime: calls a timer every frame per second that holds the time
-	//		between now and last call in milliseconds
+	//		between now and last call
 	//----------------------------------------------------------------------------
 	void Update(float deltaTime);
 

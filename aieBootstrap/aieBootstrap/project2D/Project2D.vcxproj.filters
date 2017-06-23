@@ -90,9 +90,6 @@
     <ClCompile Include="BaseState.cpp">
       <Filter>Source Files\States.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="FidgetSpinner.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -178,9 +175,6 @@
     </ClInclude>
     <ClInclude Include="ObjectPool.h">
       <Filter>Header Files\Design Patterns.h</Filter>
-    </ClInclude>
-    <ClInclude Include="FidgetSpinner.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

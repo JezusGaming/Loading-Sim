@@ -11,19 +11,28 @@
 
 
 using namespace aie;
-
+//----------------------------------------------------------------------------
+// default constructor
+//----------------------------------------------------------------------------
 Application2D::Application2D() 
 {
 }
 
+//----------------------------------------------------------------------------
+// default destructor
+//----------------------------------------------------------------------------
 Application2D::~Application2D() 
 {
 }
 
+//----------------------------------------------------------------------------
+// custom constructor which initalies variables, resoucemanager, statemachine	
+//----------------------------------------------------------------------------
 bool Application2D::startup() 
 {
-	_ASSERT(m_2dRenderer);
+	
 	m_2dRenderer = new Renderer2D();
+	_ASSERT(m_2dRenderer);
 
 	ResourceManager<Texture>::Create();
 
@@ -38,33 +47,47 @@ bool Application2D::startup()
 
 	/*m_audio = new Audio("./audio/powerup.wav");*/
 
-	_ASSERT(m_pStateMachine);
-	m_pStateMachine = new StateMachine();
+	
+	
 
+	// initilases statemachine
+	m_pStateMachine = new StateMachine();
+	_ASSERT(m_pStateMachine);
+
+	// creates 
 	m_pStateMachine->AddState(0, new SplashState());
 	m_pStateMachine->AddState(1, new MenuState());
 	m_pStateMachine->AddState(2, new LoadState());
 	m_pStateMachine->AddState(3, new GameState());
 
+	//
 	m_pStateMachine->PushState(0);
-
-	m_timer = 0;
 
 	return true;
 }
 
+//----------------------------------------------------------------------------
+// custom destructor deletes new variables, and stops memory leaks
+//----------------------------------------------------------------------------
 void Application2D::shutdown() 
 {
 	/*delete m_audio;*/
 	/*delete m_font;*/
 	delete m_shipTexture;
 	delete m_2dRenderer;
+	delete m_pStateMachine;
 }
 
+//----------------------------------------------------------------------------
+// updates the game and all functions, it calls updates on the statemachine
+//
+// Param:
+//		deltaTime: calls a timer every frame per second that holds the time
+//		between now and last call in milliseconds
+//----------------------------------------------------------------------------
 void Application2D::update(float deltaTime) 
 {
-	m_timer += deltaTime;
-
+	//updates current statemachine
 	m_pStateMachine->Update(deltaTime);
 
 	Input* input = Input::getInstance();
@@ -75,6 +98,12 @@ void Application2D::update(float deltaTime)
 
 }
 
+//----------------------------------------------------------------------------
+// draws textures for this class and sets camera
+//
+// param:
+//		m_2dRenderer: pointer to all the render functions such as drawsprite
+//----------------------------------------------------------------------------
 void Application2D::draw() 
 {
 	// wipe the screen to the background colour
@@ -83,8 +112,12 @@ void Application2D::draw()
 	// begin drawing sprites
 	m_2dRenderer->begin();
 
+	// draws current statemachine
 	m_pStateMachine->Draw(m_2dRenderer);
 
 	// done drawing sprites
 	m_2dRenderer->end();
 }
+
+
+

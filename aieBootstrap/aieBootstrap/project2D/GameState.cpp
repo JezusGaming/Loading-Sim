@@ -19,13 +19,13 @@ GameState::~GameState()
 
 void GameState::OnEnter(StateMachine * pMachine)
 {
-	/*player = new ObjectPool(10);*/
+	/*player = new ObjectPool(10);
 
 	ObjectPool pool(10);
 
 	Entity* p = pool.Allocate();
 
-	pool.Deallocate(p);
+	pool.Deallocate(p);*/
 
 	ResourceManager<Texture>* pTextureManager = ResourceManager<Texture>::GetInstance();
 
@@ -77,9 +77,6 @@ void GameState::OnDraw(Renderer2D * m_2dRenderer)
 	m_2dRenderer->setUVRect(0, 0, 1, 1);
 	m_2dRenderer->drawSprite(m_shipTexture, 600, 400, 0, 0, sin(m_timer), 1);
 
-	// draw a thin line
-	m_2dRenderer->drawLine(300, 300, 500, 400, 2, 1);
-
 	// draw a moving purple circle
 	m_2dRenderer->setRenderColour(tan(m_timer) + sin(m_timer) + 1, tan(m_timer) + 0, sin(m_timer) + 1, cos(m_timer) + 1);
 	m_2dRenderer->drawCircle(sin(m_timer) * 100 + 600, 150, 50);
@@ -87,10 +84,6 @@ void GameState::OnDraw(Renderer2D * m_2dRenderer)
 	// draw a rotating red box
 	m_2dRenderer->setRenderColour(1, 0, 0, 1);
 	m_2dRenderer->drawBox(600, 500, 60, 20, m_timer);
-
-	// draw a slightly rotated sprite with no texture, coloured yellow
-	m_2dRenderer->setRenderColour(1, 1, 0, 1);
-	m_2dRenderer->drawSprite(nullptr, 400, 400, 50, 50, 3.14159f * 0.25f, 1);
 
 	// set the camera position before we begin rendering
 	m_2dRenderer->setCameraPos(m_cameraX, m_cameraY);

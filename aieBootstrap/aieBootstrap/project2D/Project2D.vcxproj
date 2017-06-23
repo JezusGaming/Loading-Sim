@@ -93,7 +93,6 @@
     <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="FidgetSpinner.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="LoadState.cpp" />
     <ClCompile Include="main.cpp" />
@@ -116,7 +115,6 @@
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="FidgetSpinner.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphNode.h" />

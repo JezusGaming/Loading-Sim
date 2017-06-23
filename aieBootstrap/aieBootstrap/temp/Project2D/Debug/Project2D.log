@@ -1,6 +1,49 @@
-﻿  GameState.cpp
+﻿  Application2D.cpp
   Generating Code...
   Compiling...
-  Application2D.cpp
+  main.cpp
   Generating Code...
+     Creating library L:\Loading-Sim.git\aieBootstrap\aieBootstrap\temp\Project2D\Debug\Project2D.lib and object L:\Loading-Sim.git\aieBootstrap\aieBootstrap\temp\Project2D\Debug\Project2D.exp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+Matrix4.obj : warning LNK4049: locally defined symbol ??1Vector2@@QAE@XZ (public: __thiscall Vector2::~Vector2(void)) imported
+Player.obj : warning LNK4049: locally defined symbol ??1Vector2@@QAE@XZ (public: __thiscall Vector2::~Vector2(void)) imported
+CollisionManager.obj : warning LNK4217: locally defined symbol ??1Vector2@@QAE@XZ (public: __thiscall Vector2::~Vector2(void)) imported in function "public: __thiscall Collider::~Collider(void)" (??1Collider@@QAE@XZ)
+Entity.obj : warning LNK4217: locally defined symbol ??1Vector2@@QAE@XZ (public: __thiscall Vector2::~Vector2(void)) imported in function "class Entity * * __cdecl std::_Uninitialized_move<class Entity * *,class Entity * *,struct std::_Wrap_alloc<class std::allocator<class Entity *> > >(class Entity * *,class Entity * *,class Entity * *,struct std::_Wrap_alloc<class std::allocator<class Entity *> > &)" (??$_Uninitialized_move@PAPAVEntity@@PAPAV1@U?$_Wrap_alloc@V?$allocator@PAVEntity@@@std@@@std@@@std@@YAPAPAVEntity@@PAPAV1@00AAU?$_Wrap_alloc@V?$allocator@PAVEntity@@@std@@@0@@Z)
+Matrix2.obj : warning LNK4049: locally defined symbol ??1Vector2@@QAE@XZ (public: __thiscall Vector2::~Vector2(void)) imported
+Matrix3.obj : warning LNK4049: locally defined symbol ??1Vector2@@QAE@XZ (public: __thiscall Vector2::~Vector2(void)) imported
+CollisionManager.obj : warning LNK4217: locally defined symbol ??HVector2@@QAE?AV0@ABV0@@Z (public: class Vector2 __thiscall Vector2::operator+(class Vector2 const &)) imported in function "public: class Entity * __thiscall CollisionManager::TestCollisionAABB(class Entity *)" (?TestCollisionAABB@CollisionManager@@QAEPAVEntity@@PAV2@@Z)
+Player.obj : warning LNK4049: locally defined symbol ??HVector2@@QAE?AV0@ABV0@@Z (public: class Vector2 __thiscall Vector2::operator+(class Vector2 const &)) imported
+Entity.obj : warning LNK4217: locally defined symbol ??0Vector2@@QAE@XZ (public: __thiscall Vector2::Vector2(void)) imported in function "public: __thiscall Collider::Collider(void)" (??0Collider@@QAE@XZ)
+Matrix2.obj : warning LNK4049: locally defined symbol ??0Vector2@@QAE@XZ (public: __thiscall Vector2::Vector2(void)) imported
+Matrix3.obj : warning LNK4049: locally defined symbol ??0Vector2@@QAE@XZ (public: __thiscall Vector2::Vector2(void)) imported
+Player.obj : warning LNK4049: locally defined symbol ??0Vector2@@QAE@XZ (public: __thiscall Vector2::Vector2(void)) imported
+Entity.obj : warning LNK4217: locally defined symbol ??0Vector2@@QAE@MM@Z (public: __thiscall Vector2::Vector2(float,float)) imported in function "public: __thiscall Entity::Entity(void)" (??0Entity@@QAE@XZ)
+Matrix4.obj : warning LNK4049: locally defined symbol ??0Vector2@@QAE@MM@Z (public: __thiscall Vector2::Vector2(float,float)) imported
+Player.obj : warning LNK4049: locally defined symbol ??0Vector2@@QAE@MM@Z (public: __thiscall Vector2::Vector2(float,float)) imported
+Entity.obj : warning LNK4217: locally defined symbol ??AVector3@@QAEAAMH@Z (public: float & __thiscall Vector3::operator[](int)) imported in function "public: class Vector2 __thiscall Entity::GetPos(void)" (?GetPos@Entity@@QAE?AVVector2@@XZ)
+Entity.obj : warning LNK4217: locally defined symbol ??0Matrix3@@QAE@XZ (public: __thiscall Matrix3::Matrix3(void)) imported in function "public: __thiscall Entity::Entity(void)" (??0Entity@@QAE@XZ)
+Player.obj : warning LNK4049: locally defined symbol ??0Matrix3@@QAE@XZ (public: __thiscall Matrix3::Matrix3(void)) imported
+Entity.obj : warning LNK4217: locally defined symbol ??1Matrix3@@QAE@XZ (public: __thiscall Matrix3::~Matrix3(void)) imported in function __unwindfunclet$??0Entity@@QAE@XZ$1
+Player.obj : warning LNK4049: locally defined symbol ??1Matrix3@@QAE@XZ (public: __thiscall Matrix3::~Matrix3(void)) imported
+Entity.obj : warning LNK4217: locally defined symbol ??DMatrix3@@QAE?AV0@ABV0@@Z (public: class Matrix3 __thiscall Matrix3::operator*(class Matrix3 const &)) imported in function "public: void __thiscall Entity::transform(void)" (?transform@Entity@@QAEXXZ)
+Player.obj : warning LNK4049: locally defined symbol ??DMatrix3@@QAE?AV0@ABV0@@Z (public: class Matrix3 __thiscall Matrix3::operator*(class Matrix3 const &)) imported
+Entity.obj : warning LNK4217: locally defined symbol ??AMatrix3@@QAEAAVVector3@@H@Z (public: class Vector3 & __thiscall Matrix3::operator[](int)) imported in function "public: class Vector2 __thiscall Entity::GetPos(void)" (?GetPos@Entity@@QAE?AVVector2@@XZ)
+Matrix3.obj : warning LNK4217: locally defined symbol ??0Vector3@@QAE@XZ (public: __thiscall Vector3::Vector3(void)) imported in function "public: class Vector3 __thiscall Matrix3::operator*(class Vector3 const &)" (??DMatrix3@@QAE?AVVector3@@ABV1@@Z)
+Matrix4.obj : warning LNK4049: locally defined symbol ??0Vector3@@QAE@XZ (public: __thiscall Vector3::Vector3(void)) imported
+Matrix3.obj : warning LNK4217: locally defined symbol ??1Vector3@@QAE@XZ (public: __thiscall Vector3::~Vector3(void)) imported in function "public: class Vector3 __thiscall Matrix3::operator*(class Vector3 const &)" (??DMatrix3@@QAE?AVVector3@@ABV1@@Z)
+Matrix4.obj : warning LNK4049: locally defined symbol ??1Vector3@@QAE@XZ (public: __thiscall Vector3::~Vector3(void)) imported
+Matrix4.obj : warning LNK4217: locally defined symbol ??0Vector4@@QAE@XZ (public: __thiscall Vector4::Vector4(void)) imported in function "public: class Vector4 __thiscall Matrix4::operator*(class Vector4 const &)" (??DMatrix4@@QAE?AVVector4@@ABV1@@Z)
+Matrix4.obj : warning LNK4217: locally defined symbol ??0Vector4@@QAE@MMMM@Z (public: __thiscall Vector4::Vector4(float,float,float,float)) imported in function "class Vector4 __cdecl CastTo<class Vector4,class Vector2>(class Vector2)" (??$CastTo@VVector4@@VVector2@@@@YA?AVVector4@@VVector2@@@Z)
+Matrix4.obj : warning LNK4217: locally defined symbol ??1Vector4@@QAE@XZ (public: __thiscall Vector4::~Vector4(void)) imported in function "class Vector2 __cdecl CastTo<class Vector2,class Vector4>(class Vector4)" (??$CastTo@VVector2@@VVector4@@@@YA?AVVector2@@VVector4@@@Z)
+Matrix4.obj : warning LNK4217: locally defined symbol ??0Vector3@@QAE@MMM@Z (public: __thiscall Vector3::Vector3(float,float,float)) imported in function "class Vector3 __cdecl CastTo<class Vector3,class Vector2>(class Vector2)" (??$CastTo@VVector3@@VVector2@@@@YA?AVVector3@@VVector2@@@Z)
+Matrix4.obj : warning LNK4217: locally defined symbol ??GVector3@@QAE?AV0@ABV0@@Z (public: class Vector3 __thiscall Vector3::operator-(class Vector3 const &)) imported in function "public: void __thiscall Matrix4::lookAt(class Vector3,class Vector3,class Vector3)" (?lookAt@Matrix4@@QAEXVVector3@@V2@0@Z)
+Matrix4.obj : warning LNK4217: locally defined symbol ?Cross@Vector3@@QAE?AV1@AAV1@@Z (public: class Vector3 __thiscall Vector3::Cross(class Vector3 &)) imported in function "public: void __thiscall Matrix4::lookAt(class Vector3,class Vector3,class Vector3)" (?lookAt@Matrix4@@QAEXVVector3@@V2@0@Z)
+Matrix4.obj : warning LNK4217: locally defined symbol ?Normalise@Vector3@@QAEXXZ (public: void __thiscall Vector3::Normalise(void)) imported in function "public: void __thiscall Matrix4::lookAt(class Vector3,class Vector3,class Vector3)" (?lookAt@Matrix4@@QAEXVVector3@@V2@0@Z)
+Player.obj : warning LNK4217: locally defined symbol ??DVector2@@QAE?AV0@ABM@Z (public: class Vector2 __thiscall Vector2::operator*(float const &)) imported in function "public: void __thiscall Player::Update(float)" (?Update@Player@@QAEXM@Z)
+Player.obj : warning LNK4217: locally defined symbol ??KVector2@@QAE?AV0@ABM@Z (public: class Vector2 __thiscall Vector2::operator/(float const &)) imported in function "public: void __thiscall Player::Update(float)" (?Update@Player@@QAEXM@Z)
+Player.obj : warning LNK4217: locally defined symbol ??GVector2@@QAE?AV0@XZ (public: class Vector2 __thiscall Vector2::operator-(void)) imported in function "public: void __thiscall Player::Update(float)" (?Update@Player@@QAEXM@Z)
+Player.obj : warning LNK4217: locally defined symbol ??YVector2@@QAE?AV0@ABV0@@Z (public: class Vector2 __thiscall Vector2::operator+=(class Vector2 const &)) imported in function "public: void __thiscall Player::Update(float)" (?Update@Player@@QAEXM@Z)
+Player.obj : warning LNK4217: locally defined symbol ?setRotateZ@Matrix3@@QAEXM@Z (public: void __thiscall Matrix3::setRotateZ(float)) imported in function "public: void __thiscall Player::Update(float)" (?Update@Player@@QAEXM@Z)
+Player.obj : warning LNK4217: locally defined symbol ?setPos@Matrix3@@QAEXABVVector2@@@Z (public: void __thiscall Matrix3::setPos(class Vector2 const &)) imported in function "public: void __thiscall Player::Update(float)" (?Update@Player@@QAEXM@Z)
+Player.obj : warning LNK4217: locally defined symbol ??BMatrix3@@QAEPAMXZ (public: __thiscall Matrix3::operator float *(void)) imported in function "public: virtual void __thiscall Player::Draw(class aie::Renderer2D *)" (?Draw@Player@@UAEXPAVRenderer2D@aie@@@Z)
   Project2D.vcxproj -> L:\Loading-Sim.git\aieBootstrap\aieBootstrap\temp\Project2D\Debug\Project2D.exe

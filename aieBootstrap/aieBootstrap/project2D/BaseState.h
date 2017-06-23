@@ -8,7 +8,7 @@ class BaseState
 {
 public:
 	BaseState();
-	~BaseState();
+	virtual ~BaseState();
 
 	virtual void OnEnter(StateMachine* pMachine) = 0;
 	virtual void OnUpdate(float deltaTime, StateMachine* pMachine) = 0;
